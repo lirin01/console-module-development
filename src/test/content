@@ -1,0 +1,20 @@
+// admineditdetails
+
+choice=getDetails.searchOptions(); // inside else
+            switch (choice) {
+                case 1: //edit by employee id
+                {
+                    adminEditDetailsById.edit(database,view,getDetails,editProcess);
+                    break;
+                }
+                case 2: //edit by name
+                {
+                    adminEditDetailsByName.edit(database,view,getDetails,editProcess);
+                    break;
+                }
+                default:
+                {
+                    view.invalidCommand();
+                    break;
+                }
+            }
